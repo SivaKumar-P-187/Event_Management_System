@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "98656723181",
+    "project_id": "event-management-system-4b083",
+    "storage_bucket": "event-management-system-4b083.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98656723181:android:434fd33d2de5a21e0f6ce4",
+        "android_client_info": {
+          "package_name": "com.solodeveloper.event"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98656723181-ted7rtdqov45sr81i9a9cll7ai4m3inm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.solodeveloper.event",
+            "certificate_hash": "1c32be531da6b58a26bab516b264a7f4c16c4602"
+          }
+        },
+        {
+          "client_id": "98656723181-s9hnege2jtec4dc03kk1fd22v5iuothh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFvqc703DE0hpS8jPlAaQdXeXrqIY0M_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98656723181-s9hnege2jtec4dc03kk1fd22v5iuothh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
