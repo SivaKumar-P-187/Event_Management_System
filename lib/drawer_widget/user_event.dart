@@ -1,4 +1,3 @@
-import 'package:final_event/json/event_.dart';
 import 'package:final_event/json/users_.dart';
 import 'package:final_event/management/firebase.dart';
 import 'package:final_event/management/local_storage.dart';

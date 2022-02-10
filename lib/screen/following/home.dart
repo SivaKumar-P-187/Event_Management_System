@@ -88,6 +88,7 @@ class _FollowingHomeState extends State<FollowingHome> {
                       usersList: user,
                       eventId: "",
                       createUser: "",
+                      event: null,
                     );
                   },
                 );

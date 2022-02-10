@@ -4,8 +4,6 @@
 
 import 'dart:convert';
 
-import 'package:final_event/json/notification.dart';
-
 class UsersInfo {
   UsersInfo({
     required this.name,
