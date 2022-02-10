@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:final_event/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:readmore/readmore.dart';
+import 'package:final_event/screen/profile/empty_profile_image.dart';
 
 class TopScreen extends StatefulWidget {
   final NewEvent event;
@@ -219,35 +220,42 @@ class _TopScreenState extends State<TopScreen> {
 
   userList({required String userId}) {
     return StreamBuilder<UsersInfo>(
-        stream: UserManagement().getParticularUserInfo(uid: userId),
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return Container();
-          }
-          UsersInfo userInfo = snapshot.data!;
-          return InkWell(
-            onTap: () async {
-              if (userInfo.uid != userUid) {
-                await buildFollowWidget(usersInfo: userInfo);
-              }
-            },
-            child: ClipOval(
-              child: Container(
-                height: 12 * SizeConfig.heightMultiplier!,
-                width: 22 * SizeConfig.widthMultiplier!,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.grey.shade50,
-                ),
-                child: ImagesWidget(
-                  image: userInfo.photo,
-                  width: 22 * SizeConfig.widthMultiplier!,
-                  height: 12 * SizeConfig.heightMultiplier!,
-                ),
+      stream: UserManagement().getParticularUserInfo(uid: userId),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return Container();
+        }
+        UsersInfo userInfo = snapshot.data!;
+        return InkWell(
+          onTap: () async {
+            if (userInfo.uid != userUid) {
+              await buildFollowWidget(usersInfo: userInfo);
+            }
+          },
+          child: ClipOval(
+            child: Container(
+              height: 12 * SizeConfig.heightMultiplier!,
+              width: 22 * SizeConfig.widthMultiplier!,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey.shade50,
               ),
+              child: userInfo.photo.isNotEmpty
+                  ? ImagesWidget(
+                      image: userInfo.photo,
+                      width: 22 * SizeConfig.widthMultiplier!,
+                      height: 12 * SizeConfig.heightMultiplier!,
+                    )
+                  : EmptyProfilePhoto(
+                      height: 6 * SizeConfig.heightMultiplier!,
+                      email: userInfo.email,
+                      colorNumber: userInfo.colorNumber,
+                    ),
             ),
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 
   Future buildFollowWidget({required UsersInfo usersInfo}) async {
