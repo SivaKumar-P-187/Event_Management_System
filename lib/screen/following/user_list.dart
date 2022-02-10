@@ -213,7 +213,6 @@ class _UsersListState extends State<UsersList> {
                     if (!inviteList.contains(users)) {
                       String notificationId = randomAlphaNumeric(11);
                       inviteList.add(users);
-                      print("name:${widget.event!.eventName}");
                       Map<String, dynamic> notificationMap = NotificationJson(
                         username: name,
                         userId: uid,
