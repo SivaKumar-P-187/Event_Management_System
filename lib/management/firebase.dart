@@ -107,7 +107,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -148,7 +148,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -171,7 +171,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -288,7 +288,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
     await SharedPreferencesHelper.setUserPhoto(imageUrl);
@@ -349,7 +349,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -370,7 +370,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
     Navigator.of(_keyLoader.currentContext!, rootNavigator: true).pop();
@@ -439,7 +439,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -468,7 +468,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -490,7 +490,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -511,7 +511,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
     });
   }
 
@@ -549,7 +549,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -572,7 +572,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -597,7 +597,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -620,7 +620,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -696,7 +696,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
@@ -739,7 +739,7 @@ class UserManagement {
           title: Strings.errorTitle,
           context: context,
           faIcon: alterFaIcon,
-          message: e);
+          message: e.toString());
       return;
     });
   }
