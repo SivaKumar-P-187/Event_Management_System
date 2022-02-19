@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:final_event/size_config.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class MainLoading extends StatefulWidget {
   const MainLoading({Key? key}) : super(key: key);
@@ -16,18 +17,23 @@ class _MainLoadingState extends State<MainLoading> {
       body: Center(
         child: Container(
           height: 10 * SizeConfig.heightMultiplier!,
-          width: 20 * SizeConfig.widthMultiplier!,
+          width: 25 * SizeConfig.widthMultiplier!,
           decoration: BoxDecoration(
             color: Colors.black,
             borderRadius:
                 BorderRadius.circular(5 * SizeConfig.widthMultiplier!),
           ),
-          child: Center(
-            child: CircularProgressIndicator(
-              backgroundColor: Colors.grey.shade200,
-              color: Colors.red,
-              strokeWidth: 7.0,
-            ),
+          child: SpinKitFadingCircle(
+            itemBuilder: (_, int index) {
+              return DecoratedBox(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+              );
+            },
+            duration: Duration(seconds: 3),
+            size: 12 * SizeConfig.imageSizeMultiplier!,
           ),
         ),
       ),
